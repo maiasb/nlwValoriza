@@ -4,6 +4,7 @@
   "main": "server.ts",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^15.12.4",
     "express": "^4.17.1",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",
