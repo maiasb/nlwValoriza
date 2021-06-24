@@ -3,7 +3,6 @@ import { RepositoryNotFoundError } from "typeorm";
 import { CreateUserService } from "../services/createUserService";
 
 class CreateUserController {
-
     async handle(request: Request, response: Response) {
         const { name, email, admin } = request.body;
 
