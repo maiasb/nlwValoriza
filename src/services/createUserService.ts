@@ -1,5 +1,6 @@
-import { usersRepositories } from "../repositories/usersRepositories";
+import { UsersRepositories } from "../repositories/usersRepositories";
 import { getCustomRepository } from "typeorm";
+import { hash } from "bcryptjs"
 
 interface IUserRequest {
     name: string;
@@ -11,7 +12,7 @@ interface IUserRequest {
 class CreateUserService {
 
     async execute({ name, email, admin, password }: IUserRequest) {
-        const usersRepository = getCustomRepository(usersRepositories);
+        const usersRepository = getCustomRepository(UsersRepositories);
 
         // throw new devolve resposta a camada acima (Aqui o controller)
         if (!email) {
@@ -24,7 +25,9 @@ class CreateUserService {
             throw new Error("User already exists.");
         }
 
-        const user = usersRepository.create({ name, email, admin, password })
+        const passwordHash = await hash(password, 8)
+
+        const user = usersRepository.create({ name, email, admin, password: passwordHash })
 
         await usersRepository.save(user);
 
