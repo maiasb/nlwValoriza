@@ -15,8 +15,10 @@ import { ListUserReceiveComplimentsController } from "./controllers/ListUserRece
 import { ensureAdmin } from "./middlewares/ensureAdmin";
 // IMPORTAÇÃO DE MIDDLEWARE PARA RECEBER VALIDAR TOKEN
 import { ensureAuthenticated } from "./middlewares/ensureAuthenticated";
-import { ListTagsController } from "./controllers/ListTagsController";
+// IMPORTAÇÃO DE CONTROLLER PARA LISTAR TODOS OS USUÁRIOS
 import { ListUsersController } from "./controllers/ListUsersController";
+// IMPORTAÇÃO DE CONTROLLER PARA LISTAR TODAS TAGS REGISTRADAS
+import { ListTagsController } from "./controllers/ListTagsController";
 
 
 const router = Router();
@@ -37,10 +39,10 @@ const listTagsController = new ListTagsController();
 
 const listUsersController = new ListUsersController();
 
+// ROTA PARA LISTAR TODOS OS USUÁRIOS CADASTRADOS NO APP
+router.get("/users", ensureAuthenticated, listUsersController.handle)
 // ROTA PARA LISTAR TODAS AS TAGS
 router.get("/tags", ensureAuthenticated, listTagsController.handle)
-
-router.get("/users", ensureAuthenticated, listUsersController.handle)
 // ROTA PARA A CRIAÇÃO DE USUÁRIO
 router.post("/users", createUserController.handle);
 // ROTA PARA A CRIAÇÃO DE TAG
