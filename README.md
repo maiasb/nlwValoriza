@@ -18,6 +18,12 @@
 
 - Cadastro de elogios:
 
-    [  ] Não é permitido usuário cadastrar um elogio para si
+    [ x ] Não é permitido usuário cadastrar um elogio para si
 
-    [  ] Não é permitido cadastrar elogios para usuários inválidos (O usuário precisa estar autenticado na aplicação)
+    [ x ] Não é permitido cadastrar elogios para usuários inválidos (O usuário precisa estar autenticado na aplicação)
+
+- Resolução de problemas:
+
+    [ x ] Corrigir ensureAdmin
+    
+    [ x ] Correção compliments
