@@ -2,6 +2,7 @@ import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } fro
 // IMPORTAÇÃO DE LIB PARA A CRIAÇÃO DE ID DO USUÁRIO
 // PADRÃO V4 É EMBARALHADO
 import { v4 as uuid } from "uuid";
+import { Exclude } from "class-transformer";
 
 // TABELA NO QUAL SERÁ INSERIDO O NOVO USUÁRIO
 @Entity("users")
@@ -20,6 +21,7 @@ class User {
     @Column()
     admin: boolean;
 
+    @Exclude()
     @Column()
     password: string;
 
