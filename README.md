@@ -1,5 +1,9 @@
 ## NLW Valoriza
 
+### Sobre
+
+- Servidor para a interação dos usuários da plataforma interagirem entre si. Por meio de tags, é possível proferir elogios para outros usuários e receber também.
+
 ### Regras
 
 - Cadastro de usuário:
