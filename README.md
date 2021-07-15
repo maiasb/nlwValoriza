@@ -1,7 +1,7 @@
 ## NLW Valoriza
 
 ### Sobre
-
+- Ao baixar o repositório, utilizar no terminal o comando `yarn` no seu terminal para instalar todas as dependências necessárias.
 - Servidor para a interação dos usuários da plataforma interagirem entre si. Por meio de tags, é possível proferir elogios para outros usuários e receber também.
 
 ### Regras
