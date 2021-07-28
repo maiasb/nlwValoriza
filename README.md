@@ -1,8 +1,13 @@
 ## NLW Valoriza
 
-### Sobre
+### Funcionalidades
+- API para aplicação que tem como finalidade, a realização de elogios dos usuários da plataforma, uns com os outros.
+- É possível realizar a criação de tags e elogios para cada usuário cadastrado, assim como receber elogios.
+
+### Execução
 - Ao baixar o repositório, utilizar no terminal o comando `yarn` no seu terminal para instalar todas as dependências necessárias.
-- Servidor para a interação dos usuários da plataforma interagirem entre si. Por meio de tags, é possível proferir elogios para outros usuários e receber também.
+- Para rodar o servidor, executar o comando `yarn dev` em seu terminal.
+- As rotas necessárias para o envio de dados para a API estão em [Insomnia-nlwValoriza](https://github.com/maiasb/Insomnia-nlwValoriza)
 
 ### Regras
 
