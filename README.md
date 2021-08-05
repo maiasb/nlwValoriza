@@ -1,4 +1,5 @@
 ## NLW Valoriza
+- Rotas/Controllers/Services/Repositories/Entities/Database.
 
 ### Funcionalidades
 - API para aplicação que tem como finalidade, a realização de elogios dos usuários da plataforma, uns com os outros.
